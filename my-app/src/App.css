@@ -1,28 +1,65 @@
-.App {
-  text-align: center;
+.brn-header-button {
+  padding-right: 30px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.brn-content-box__content {
+  max-width: 942px;
+  margin: auto;
+  padding: 4em 2em;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.brn-box--flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.brn-box--flex-spread {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.brn-box--width-medium {
+  width: 600px;
+}
+.brn-box--width-small {
+  width: 18vw;
+  height: 18vw;
 }
 
-.App-title {
-  font-size: 1.5em;
+.brn-content-box--light{
+  background-color: #f0f3f5;
 }
 
-.App-intro {
-  font-size: large;
+.brn-round-image {
+  display: block;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.brn-round-image--icon {
+  background-color: #9fa6b5;
+  width: 100%;
+  height: 100%;
+}
+.brn-round-image--small {
+  width: 100px;
+  height: 100px
+}
+.brn-round-image--normal {
+  width: 140px;
+  height: 140px
+}
+.brn-round-image--large {
+  width: 190px;
+  height: 190px
+}
+.brn-round-image--xlarge {
+  width: 240px;
+  height: 240px
+}
+.brn-round-image--xxlarge {
+  width: 290px;
+  height: 290px
 }
