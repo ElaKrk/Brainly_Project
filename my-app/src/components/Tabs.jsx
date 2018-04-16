@@ -1,11 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const WIDTH = {
-    SMALL: 'small',
-    NORMAL: 'normal',
-    LARGE: 'large'
-};
+
 class Tabs extends React.Component {
 
     constructor(props) {
@@ -43,18 +39,18 @@ class Tabs extends React.Component {
     }
 
     render() {
-        const { border, width = WIDTH.NORMAL, className } = this.props;
-        const TabsClass = classNames('brn-switch-tab-container', {
-            [`brn-switch-tab--${width}`]: width !== WIDTH.NORMAL,
-            [`brn-switch-tab--with-border`]: border
-        }, className);
+        const { width, border, className } = this.props;
+        const TabsClass = classNames('brn-switch-tab-container',
+            `brn-switch-tab--${width}`,
+            { [`brn-switch-tab--with-border`]: border },
+            className);
 
         return (
             <div>
                 <div className={TabsClass}>
                     {this.renderChildrenWithTabsApiAsProps()}
                 </div>
-                <div className="">
+                <div>
                     {this.renderActiveTabContent()}
                 </div>
             </div>
@@ -67,4 +63,3 @@ Tabs.defaultProps = {
 };
 
 export default Tabs;
-export {WIDTH};

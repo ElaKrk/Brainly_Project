@@ -22,12 +22,12 @@ const UnorderedList = () => {
           </li>
         );
         return (
-            <ul>{listItems}</ul>
+            <ul className="brn-element--padding-left">{listItems}</ul>
         );
     }
   
     return (
-        <UnorderedList liElements={liElements} />
+        <UnorderedList liElements={liElements}/>
     );
 };
 

@@ -9,7 +9,7 @@ import ButtonFreeTrial from '../../components/ButtonFreeTrial.jsx';
 const FreeTrial = () => {
   return (
     <ContentBox>
-        <ContentBoxContent className="brn-content-box__content brn-box--flex brn-box--flex--spread">
+        <ContentBoxContent className="brn-content-box__content brn-box--flex brn-box--flex-spread">
             <div className="brn-box--width-medium">
                 <ContentBoxTitle>
                     <TextBit size={TEXT_BIT_SIZE.SMALL} color={TEXT_BIT_COLOR.DARK}>Get answers to all your questions</TextBit>
