@@ -3,7 +3,7 @@ import ContentBox from 'style-guide/src/components/content-box/ContentBox';
 import ContentBoxContent, {SIZE as CONTENT_BOX_CONT_SIZE} from 'style-guide/src/components/content-box/ContentBoxContent';
 import RoundImage, {SIZE as ROUND_IMAGE_SIZE} from '../../../components/RoundImage.jsx';
 import HeaderSecondary ,{HEADER_SIZE} from 'style-guide/src/components/text/HeaderPrimary';
-import TabsContainer, {WIDTH as TABS_WIDTH} from '../../../components/TabsContainer';
+import TabsContainer from '../../../components/TabsContainer';
 
 const BrainlyPlusFeatures = () => {
   return (
@@ -16,7 +16,7 @@ const BrainlyPlusFeatures = () => {
             <ContentBoxContent>
               <HeaderSecondary size={HEADER_SIZE.SMALL}> Brainly Plus benefits for
               </HeaderSecondary>
-              <TabsContainer width={TABS_WIDTH.SMALL}/>
+              <TabsContainer/>
             </ContentBoxContent>
           </ContentBoxContent>
         </ContentBoxContent>
