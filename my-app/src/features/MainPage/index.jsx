@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header.jsx';
 import FreeTrial from './FreeTrial.jsx';
-import BrainlyPlus from './BrainlyPlus';
+import GetBrainlyPlus from './GetBrainlyPlus';
+import BrainlyPlusFeatures from './BrainlyPlusFeatures';
 
 class MainPage extends Component {
   render() {
@@ -9,7 +10,8 @@ class MainPage extends Component {
       <div className="App">
         <Header />
         <FreeTrial />
-        <BrainlyPlus />
+        <GetBrainlyPlus />
+        <BrainlyPlusFeatures />
       </div>
     );
   }

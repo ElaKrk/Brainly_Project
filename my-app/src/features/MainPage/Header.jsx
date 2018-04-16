@@ -12,7 +12,7 @@ import HomeButton from 'home-button/HomeButton';
 import RWDHelper, {TYPE as RWD_TYPE} from 'style-guide/src/components/helpers/RwdHelper';
 import IconAsButton, {TYPE as ICONBUTT_TYPE, ICON_COLOR} from 'style-guide/src/components/icon-as-button/IconAsButton';
 import Icon, {TYPE as ICON_TYPE} from 'style-guide/src/components/icons/Icon';
-import ButtonPrimary, {BUTTON_PRIMARY_TYPE} from 'style-guide/src/components/buttons/ButtonPrimary';
+import ButtonFreeTrial from '../../components/ButtonFreeTrial.jsx';
 
 const Headers = () => {
   return (
@@ -28,10 +28,10 @@ const Headers = () => {
                   <HeaderRight>
                     <ActionList direction="to-right">
                       <ActionListHole>
-                        <Link color={COLOR.LIGHT} className="brn-header-button">Log in</Link>
+                        <Link color={COLOR.LIGHT} className="brn-element--margin-right brn-element--weight-light">Log in</Link>
                       </ActionListHole>
                       <ActionListHole>
-                      <ButtonPrimary buttonType={BUTTON_PRIMARY_TYPE.DARK}>Start free trial</ButtonPrimary>
+                      <ButtonFreeTrial/>
                       </ActionListHole>
                     </ActionList>
                   </HeaderRight>
