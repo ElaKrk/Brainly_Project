@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import Header from './Header.jsx';
-import FreeTrial from './FreeTrial.jsx';
+import HeaderBrainly from './HeaderBrainly';
+import FreeTrial from './FreeTrial';
 import GetBrainlyPlus from './GetBrainlyPlus';
 import BrainlyPlusFeatures from './BrainlyPlusFeatures';
+import BrainlyPlusFeaturedIn from './BrainlyPlusFeaturedIn';
+import FooterBrainly from './FooterBrainly';
 
 class MainPage extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <HeaderBrainly />
         <FreeTrial />
         <GetBrainlyPlus />
         <BrainlyPlusFeatures />
+        <BrainlyPlusFeaturedIn />
+        <FooterBrainly />
       </div>
     );
   }

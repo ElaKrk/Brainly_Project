@@ -14,7 +14,7 @@ import IconAsButton, {TYPE as ICONBUTT_TYPE, ICON_COLOR} from 'style-guide/src/c
 import Icon, {TYPE as ICON_TYPE} from 'style-guide/src/components/icons/Icon';
 import ButtonFreeTrial from '../../components/ButtonFreeTrial.jsx';
 
-const Headers = () => {
+const HeaderBrainly = () => {
   return (
         <Header>
           <HeaderContainer>
@@ -52,4 +52,4 @@ const Headers = () => {
   );
 };
 
-export default Headers;
+export default HeaderBrainly;

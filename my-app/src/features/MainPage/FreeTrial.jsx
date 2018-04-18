@@ -1,9 +1,9 @@
 import React from 'react';
 import ContentBox from 'style-guide/src/components/content-box/ContentBox';
-import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
+import ContentBoxContent, {SIZE} from 'style-guide/src/components/content-box/ContentBoxContent';
 import ContentBoxTitle from 'style-guide/src/components/content-box/ContentBoxTitle';
 import TextBit, {SIZE as TEXT_BIT_SIZE, COLOR as TEXT_BIT_COLOR} from 'style-guide/src/components/text/TextBit';
-import RoundImage, {SIZE as ROUND_IMAGE_SIZE} from '../../components/RoundImage.jsx';
+import ImageRound, {SIZE as ROUND_IMAGE_SIZE} from '../../components/ImageRound.jsx';
 import ButtonFreeTrial from '../../components/ButtonFreeTrial.jsx';
 
 const FreeTrial = () => {
@@ -14,12 +14,12 @@ const FreeTrial = () => {
                 <ContentBoxTitle>
                     <TextBit size={TEXT_BIT_SIZE.SMALL} color={TEXT_BIT_COLOR.DARK}>Get answers to all your questions</TextBit>
                 </ContentBoxTitle>
-                <ContentBoxContent className="sg-content-box__actions--spaced-top-xxlarge">
+                <ContentBoxContent spacedTop={SIZE.XXLARGE}>
                     <ButtonFreeTrial/>
                 </ContentBoxContent>
             </div>
             <div className="brn-box--width-small">
-                <RoundImage imgSrc="https://source.unsplash.com/240x240/?cat" size={ROUND_IMAGE_SIZE.XLARGE} />
+                <ImageRound imgSrc="https://source.unsplash.com/240x240/?cat" size={ROUND_IMAGE_SIZE.XLARGE} />
             </div>
         </ContentBoxContent>
     </ContentBox>

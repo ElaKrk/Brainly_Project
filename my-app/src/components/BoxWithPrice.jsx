@@ -4,12 +4,10 @@ import ContentBox, {CONTENT_BOX_SPACING_SIZE} from 'style-guide/src/components/c
 import ContentBoxContent, {ALIGNMENT as CONTENT_BOX_CON_ALIGNMENT} from 'style-guide/src/components/content-box/ContentBoxContent';
 import Text, {SIZE as TEXT_SIZE, WEIGHT as TEXT_WEIGHT} from 'style-guide/src/components/text/Text';
 
-
-
-const BoxWithPrice = () => {
+const BoxWithPrice = (props) => {
     
-    const price = "$14.95";
-    const methodsOfPayment = "credit card, SMS";
+    const price = props.price || '';
+    const methodsOfPayment = props.methodsOfPayment || '';
     
     return (
         <div>

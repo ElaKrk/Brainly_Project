@@ -1,6 +1,13 @@
 import React from 'react';
+import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
+
 import classNames from 'classnames';
 
+const WIDTH = {
+    SMALL: 'small',
+    NORMAL: 'normal',
+    LARGE: 'large'
+  };
 
 class Tabs extends React.Component {
 
@@ -39,20 +46,26 @@ class Tabs extends React.Component {
     }
 
     render() {
-        const { width, border, className } = this.props;
+        const { width = WIDTH.NORMAL, border, className, button } = this.props;
         const TabsClass = classNames('brn-switch-tab-container',
-            `brn-switch-tab--${width}`,
-            { [`brn-switch-tab--with-border`]: border },
+            `brn-switch-tab--${width}`, 
+            {[`brn-switch-tab--with-border`]: border },
             className);
-
         return (
             <div>
                 <div className={TabsClass}>
                     {this.renderChildrenWithTabsApiAsProps()}
                 </div>
-                <div>
-                    {this.renderActiveTabContent()}
-                </div>
+                <ContentBoxContent className="brn-box--flex brn-box--flex-spread brn-content-box__content--padding-top-bottom-medium">
+                    <div className="brn-box--width-small">
+                        {this.renderActiveTabContent()[0]}
+                    </div>
+                    <div className="brn-box--width-medium-large">
+                        <p> {this.renderActiveTabContent().slice(1)}
+                        </p>
+                        {button}
+                    </div>
+                </ContentBoxContent>
             </div>
         );
     }
@@ -63,3 +76,4 @@ Tabs.defaultProps = {
 };
 
 export default Tabs;
+export {WIDTH};

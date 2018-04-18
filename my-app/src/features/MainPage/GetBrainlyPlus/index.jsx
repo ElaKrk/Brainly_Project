@@ -5,10 +5,14 @@ import ContentBoxTitle from 'style-guide/src/components/content-box/ContentBoxTi
 import HeaderSecondary, { HEADER_SIZE } from 'style-guide/src/components/text/HeaderPrimary';
 import Text, { WEIGHT } from 'style-guide/src/components/text/Text';
 import BoxWithPrice from '../../../components/BoxWithPrice.jsx';
-import UnorderedList from '../../../components/UnorderedList.jsx';
-import ButtonGetBrainlyPlus from '../../../components/ButtonGetBrainlyPlus.jsx';
+import ListBrainlyBenefits from './ListBrainlyBenefits.jsx';
+import ButtonGetBrnPlus from '../../../components/ButtonGetBrnPlus.jsx';
+
+const price = '$14.95';
+const methodsOfPayment = 'credit card, SMS';
 
 const GetBrainlyPlus = () => {
+
     return (
         <ContentBox className="brn-content-box--light">
             <ContentBoxContent className="brn-content-box__content">
@@ -21,12 +25,12 @@ const GetBrainlyPlus = () => {
             </Text>
                 <ContentBoxContent className="brn-box--flex brn-box--flex-spread">
                     <div className="brn-box--width-small">
-                        <BoxWithPrice />
+                        <BoxWithPrice price={price} methodsOfPayment={methodsOfPayment}/>
                     </div>
                     <div className="brn-box--width-large">
-                        <UnorderedList />
+                        <ListBrainlyBenefits />
                         <ContentBoxContent spacedTop={CONTENT_BOX_CONT_SIZE.LARGE} className="brn-element--margin-left">
-                            <ButtonGetBrainlyPlus />
+                            <ButtonGetBrnPlus>Get Brainly Plus Now</ButtonGetBrnPlus>
                         </ContentBoxContent>
                     </div>
                 </ContentBoxContent>
