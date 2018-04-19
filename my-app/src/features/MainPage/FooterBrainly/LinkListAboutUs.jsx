@@ -10,7 +10,7 @@ const LinkListAboutUs = () => {
         <ActionListHole grow spaceBellow>
             <Text size={TEXT_SIZE.STANDOUT} weight={TEXT_WEIGHT.BOLD}>
                 About us
-          </Text>
+            </Text>
             <ContentBox spacedTop={CONTENT_BOX_SPACING_SIZE.LARGE}>
                 <List spaced>
                     <ListItem>

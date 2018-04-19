@@ -231,3 +231,9 @@
   right: 20px;
   top: 145px;
 }
+.brn-mobile-store__button--ios {
+  background-image: url(https://brainly.pl/app/img/mobile_store/download_ios_app_pl.svg);
+}
+.brn-mobile-store__button--ios-us {
+  background-image: url(https://brainly.com/app/img/mobile_store/download_ios_app_us.svg);
+}

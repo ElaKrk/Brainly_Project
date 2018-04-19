@@ -61,8 +61,8 @@ class Tabs extends React.Component {
                         {this.renderActiveTabContent()[0]}
                     </div>
                     <div className="brn-box--width-medium-large">
-                        <p> {this.renderActiveTabContent().slice(1)}
-                        </p>
+                        <div> {this.renderActiveTabContent().slice(1)}
+                        </div>
                         {button}
                     </div>
                 </ContentBoxContent>
