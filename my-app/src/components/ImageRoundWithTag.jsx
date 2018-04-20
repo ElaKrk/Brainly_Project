@@ -1,9 +1,9 @@
+/* eslint react/prop-types: 0 */
 import React from 'react';
 import classNames from 'classnames';
-import ImageRound, { SIZE as ROUND_IMAGE_SIZE } from './ImageRound.jsx';
 import Box from 'style-guide/src/components/box/Box';
 import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
-
+import ImageRound, { SIZE as ROUND_IMAGE_SIZE } from './ImageRound';
 
 const SIZE = {
   SMALL: 'small',
@@ -11,7 +11,7 @@ const SIZE = {
 };
 
 const ImageRoundWithTag = ({
-  size = SIZE.SMALL, className, tagValue, tagText, ...props
+  size = SIZE.SMALL, className, tagValue, tagText,
 }) => {
   const TagClass = classNames(
     'brn-image-tag', 'brn-image-tag--position-right',

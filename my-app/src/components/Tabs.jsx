@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import React from 'react';
 import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
 
@@ -20,7 +21,8 @@ class Tabs extends React.Component {
 
   handleTabClick(tabIndex) {
     this.setState({
-      activeTabIndex: tabIndex === this.state.activeTabIndex ? this.props.defaultActiveTabIndex : tabIndex,
+      activeTabIndex:
+        tabIndex === this.state.activeTabIndex ? this.props.defaultActiveTabIndex : tabIndex,
     });
   }
 
@@ -40,6 +42,7 @@ class Tabs extends React.Component {
     if (children[activeTabIndex]) {
       return children[activeTabIndex].props.children;
     }
+    return '';
   }
 
   render() {

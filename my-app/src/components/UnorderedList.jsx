@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import React from 'react';
 import classNames from 'classnames';
 
@@ -20,9 +21,10 @@ const UnorderedList = ({
 
   const liElements = props.liElements || [];
   const listItems = liElements.map(liElement =>
-    (<li className={UnorderedListElClass} key={liElement.toString()}>
-      {liElement}
-    </li>));
+    (
+      <li className={UnorderedListElClass} key={liElement.toString()}>
+        {liElement}
+      </li>));
   return (
     <ul className={UnorderedListClass}>{listItems}</ul>
   );
