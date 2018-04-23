@@ -33,6 +33,7 @@ class TabSwitch extends React.Component {
     const tabElements = this.props.tabElements || [];
     const tabItems = tabElements.map((tabElement, index) => (
       <Text
+        key={tabElement.props.children.toString()}
         color={TEXT_COLOR.GRAY}
         size={TEXT_SIZE.SMALL}
         weight={TEXT_WEIGHT.BOLD}
@@ -42,7 +43,6 @@ class TabSwitch extends React.Component {
         )}
         onClick={this.handleTabClick}
         tabIndex={index}
-        isActive={index === this.state.activeTabIndex}
       >
         {tabElement.props.name}
       </Text>
