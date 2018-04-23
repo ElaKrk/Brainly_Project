@@ -1,8 +1,8 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
-import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
-
 import classNames from 'classnames';
+import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
+import Text, { SIZE as TEXT_SIZE, COLOR as TEXT_COLOR, WEIGHT as TEXT_WEIGHT } from 'style-guide/src/components/text/Text';
 
 const WIDTH = {
   SMALL: 'small',
@@ -10,7 +10,7 @@ const WIDTH = {
   LARGE: 'large',
 };
 
-class Tabs extends React.Component {
+class TabSwitch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,28 +19,43 @@ class Tabs extends React.Component {
     this.handleTabClick = this.handleTabClick.bind(this);
   }
 
-  handleTabClick(tabIndex) {
+  handleTabClick(event) {
+    event.preventDefault();
+    const { tabIndex } = event.target;
     this.setState({
-      activeTabIndex:
-        tabIndex === this.state.activeTabIndex ? this.props.defaultActiveTabIndex : tabIndex,
+      activeTabIndex: tabIndex === this.state.activeTabIndex ?
+        this.props.defaultActiveTabIndex : tabIndex,
     });
   }
 
   // Encapsulate <Tabs/> component API as props for <Tab/> children
   renderChildrenWithTabsApiAsProps() {
-    return React.Children.map(this.props.children, (child, index) => React.cloneElement(child, {
-      onClick: this.handleTabClick,
-      tabIndex: index,
-      isActive: index === this.state.activeTabIndex,
-    }));
+    const tabElements = this.props.tabElements || [];
+    const tabItems = tabElements.map((tabElement, index) => (
+      <Text
+        color={TEXT_COLOR.GRAY}
+        size={TEXT_SIZE.SMALL}
+        weight={TEXT_WEIGHT.BOLD}
+        className={classNames(
+          'brn-switch-tab__tab',
+          `${(index === this.state.activeTabIndex) ? 'brn-switch-tab__tab--active' : ''}`,
+        )}
+        onClick={this.handleTabClick}
+        tabIndex={index}
+        isActive={index === this.state.activeTabIndex}
+      >
+        {tabElement.props.name}
+      </Text>
+    ));
+    return tabItems;
   }
 
   // Render current active tab content
   renderActiveTabContent() {
-    const { children } = this.props;
+    const { tabElements } = this.props;
     const { activeTabIndex } = this.state;
-    if (children[activeTabIndex]) {
-      return children[activeTabIndex].props.children;
+    if (tabElements[activeTabIndex]) {
+      return tabElements[activeTabIndex].props.children;
     }
     return '';
   }
@@ -55,6 +70,7 @@ class Tabs extends React.Component {
       { 'brn-switch-tab--with-border': border },
       className,
     );
+
     return (
       <div>
         <div className={TabsClass}>
@@ -75,9 +91,9 @@ class Tabs extends React.Component {
   }
 }
 
-Tabs.defaultProps = {
+TabSwitch.defaultProps = {
   defaultActiveTabIndex: 0,
 };
 
-export default Tabs;
+export default TabSwitch;
 export { WIDTH };
