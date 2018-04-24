@@ -36,7 +36,7 @@ class TabSwitch extends React.Component {
         tab={tabElement.name}
         index={index}
         onClick={() => this.handleTabClick(index)}
-        className={(index === this.state.activeTabIndex) ? 'brn-switch-tab__tab--active' : ''}
+        active={(index === this.state.activeTabIndex)}
       />
     ));
     return tabItems;
@@ -70,10 +70,10 @@ class TabSwitch extends React.Component {
         </div>
         <ContentBoxContent className="brn-box--flex brn-box--flex-spread brn-content-box__content--padding-top-bottom-medium">
           <div className="brn-box--width-small">
-            {this.renderActiveTabContent()[0]}
+            {this.renderActiveTabContent().props.children[0]}
           </div>
           <div className="brn-box--width-medium-large">
-            <div> {this.renderActiveTabContent().slice(1)}
+            <div> {this.renderActiveTabContent().props.children.slice(1)}
             </div>
             {button}
           </div>

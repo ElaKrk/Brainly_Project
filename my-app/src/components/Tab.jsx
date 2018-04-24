@@ -5,14 +5,15 @@ import classNames from 'classnames';
 import Text, { SIZE as TEXT_SIZE, COLOR as TEXT_COLOR, WEIGHT as TEXT_WEIGHT } from 'style-guide/src/components/text/Text';
 
 const Tab = ({
-  index, tab, className, ...props
+  index, tab, className, active, ...props
 }) => {
-  const TabClass = classNames(
+  const tabClass = classNames(
     'brn-switch-tab__tab',
+    (active) ? 'brn-switch-tab__tab--active' : '',
     className,
   );
   return (
-    <div key={tab} tabIndex={index} className={TabClass} {...props}>
+    <div key={tab} tabIndex={index} className={tabClass} {...props}>
       <Text
         color={TEXT_COLOR.GRAY}
         size={TEXT_SIZE.SMALL}

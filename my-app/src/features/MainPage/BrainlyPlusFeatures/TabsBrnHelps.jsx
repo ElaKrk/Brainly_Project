@@ -17,23 +17,30 @@ const numberOfVerifiedAnswers = '2 mln';
 
 const tabElementOne = {
   name: tabOne,
-  content: [<ImageRoundWithTag tagValue={numberOfVerifiedAnswers} tagText="Verified Answers" />,
-    VerifiedContent,
-    <ListVerifiedAnswers />],
+  content:
+  <React.Fragment>
+    <ImageRoundWithTag tagValue={numberOfVerifiedAnswers} tagText="Verified Answers" />
+    {VerifiedContent}
+    <ListVerifiedAnswers />
+  </React.Fragment>,
 };
 
 const tabElementTwo = {
   name: tabTwo,
-  content: [<ImageRoundWithTag tagValue={numberOfVerifiedAnswers} tagText="Verified Answers" />,
-    PriorityContent],
+  content:
+  <React.Fragment>
+    <ImageRoundWithTag tagValue={numberOfVerifiedAnswers} tagText="Verified Answers" />
+    {PriorityContent}
+  </React.Fragment>,
 };
 
 const tabElementThree = {
   name: tabThree,
-  content: [
-    <ImageRoundWithTag tagValue={numberOfVerifiedAnswers} tagText="Verified Answers" />,
-    AddFreeContent,
-  ],
+  content:
+  <React.Fragment>
+    <ImageRoundWithTag tagValue={numberOfVerifiedAnswers} tagText="Verified Answers" />
+    {AddFreeContent}
+  </React.Fragment>,
 };
 
 const tabElements = [tabElementOne, tabElementTwo, tabElementThree];

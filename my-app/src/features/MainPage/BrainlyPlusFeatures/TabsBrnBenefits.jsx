@@ -23,29 +23,38 @@ const tabThreeImgSrc = 'https://source.unsplash.com/240x240/?monkey';
 
 const tabElementOne = {
   name: tabOne,
-  content: [<ImageRound imgSrc={tabOneImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />,
-    StudentsTabContent,
+  content:
+  <React.Fragment>
+    <ImageRound imgSrc={tabOneImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />
+    {StudentsTabContent}
     <Text className="brn-text--padding-top-bottom-medium" weight={TEXT_WEIGHT.BOLD}>
       {tabOneAuthor}
-    </Text>],
+    </Text>
+  </React.Fragment>,
 };
 
 const tabElementTwo = {
   name: tabTwo,
-  content: [<ImageRound imgSrc={tabTwoImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />,
-    ParentsTabContent,
+  content:
+  <React.Fragment>
+    <ImageRound imgSrc={tabTwoImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />
+    {ParentsTabContent}
     <Text className="brn-text--padding-top-bottom-medium" weight={TEXT_WEIGHT.BOLD}>
       {tabTwoAuthor}
-    </Text>],
+    </Text>
+  </React.Fragment>,
 };
 
 const tabElementThree = {
   name: tabThree,
-  content: [<ImageRound imgSrc={tabThreeImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />,
-    HomeschoolersTabContent,
+  content:
+  <React.Fragment>
+    <ImageRound imgSrc={tabThreeImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />
+    {HomeschoolersTabContent}
     <Text className="brn-text--padding-top-bottom-medium" weight={TEXT_WEIGHT.BOLD}>
       {tabThreeAuthor}
-    </Text>],
+    </Text>
+  </React.Fragment>,
 };
 
 const tabElements = [tabElementOne, tabElementTwo, tabElementThree];
