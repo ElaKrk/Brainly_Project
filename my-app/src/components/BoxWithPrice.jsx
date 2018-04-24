@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import React from 'react';
 import Box, { COLOR as BOX_COLOR, PADDING as BOX_PADDING } from 'style-guide/src/components/box/Box';
 import ContentBox, { CONTENT_BOX_SPACING_SIZE } from 'style-guide/src/components/content-box/ContentBox';
@@ -28,7 +29,6 @@ const BoxWithPrice = (props) => {
         </Box>
       </ContentBox>
     </div>
-
   );
 };
 

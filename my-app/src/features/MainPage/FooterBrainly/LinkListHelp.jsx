@@ -5,48 +5,46 @@ import ContentBox, { CONTENT_BOX_SPACING_SIZE } from 'style-guide/src/components
 import List from 'style-guide/src/components/list/List';
 import ListItem from 'style-guide/src/components/list/ListItem';
 
-const LinkListHelp = () => {
-    return (
-        <ActionListHole grow spaceBellow>
-            <Text size={TEXT_SIZE.STANDOUT} weight={TEXT_WEIGHT.BOLD}>
+const LinkListHelp = () => (
+  <ActionListHole grow spaceBellow>
+    <Text size={TEXT_SIZE.STANDOUT} weight={TEXT_WEIGHT.BOLD}>
                Help
-          </Text>
-            <ContentBox spacedTop={CONTENT_BOX_SPACING_SIZE.LARGE}>
-                <List spaced>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.zendesk.com/hc/en-us">
+    </Text>
+    <ContentBox spacedTop={CONTENT_BOX_SPACING_SIZE.LARGE}>
+      <List spaced>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.zendesk.com/hc/en-us">
                             FAQ
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/pages/terms_of_use">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/pages/terms_of_use">
                             Terms of use
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/pages/privacy_policy">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/pages/privacy_policy">
                             Privacy policy
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/pages/community_guidelines">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/pages/community_guidelines">
                             Community guidelines
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/app/scholarship">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/app/scholarship">
                             Scholarship
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="">
                             Archive
-                </Text>
-                    </ListItem>
-                </List>
-            </ContentBox>
-        </ActionListHole>
-    )
-}
+          </Text>
+        </ListItem>
+      </List>
+    </ContentBox>
+  </ActionListHole>
+);
 
 export default LinkListHelp;

@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import React from 'react';
 import classNames from 'classnames';
 
@@ -9,22 +10,23 @@ const SIZE = {
 const UnorderedList = ({
   size = SIZE.SMALL, spaced, padding, className, ...props
 }) => {
-  const UnorderedListClass = classNames({
+  const unorderedListClass = classNames({
     [`brn-un-list-padding-left--${size}`]: size,
   }, className);
 
-  const UnorderedListElClass = classNames(
+  const unorderedListElClass = classNames(
     { 'brn-list__element--spaced': spaced },
     className,
   );
 
   const liElements = props.liElements || [];
   const listItems = liElements.map(liElement =>
-    (<li className={UnorderedListElClass} key={liElement.toString()}>
-      {liElement}
-    </li>));
+    (
+      <li className={unorderedListElClass} key={liElement.toString()}>
+        {liElement}
+      </li>));
   return (
-    <ul className={UnorderedListClass}>{listItems}</ul>
+    <ul className={unorderedListClass}>{listItems}</ul>
   );
 };
 

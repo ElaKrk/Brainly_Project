@@ -13,6 +13,7 @@
     "babel-runtime": "6.26.0",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "1.1.3",
+    "classnames": "^2.2.5",
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
@@ -50,7 +51,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "lint": "eslint src/**/*.js src/**/*.jsx"
+    "lint": "eslint src/**/*.jsx"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -95,6 +96,9 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^16.1.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "flow-bin": "^0.70.0"
   }
 }

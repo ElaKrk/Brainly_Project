@@ -190,6 +190,9 @@
   text-align: center;
   border-right: 1px solid#9fa6b5;
 }
+.brn-switch-tab__tab:focus {
+  outline:0;
+}
 
 .brn-switch-tab__tab:first-child {
   border-radius: 15px 0 0 15px;

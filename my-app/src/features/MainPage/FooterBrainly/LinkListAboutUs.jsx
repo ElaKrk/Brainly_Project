@@ -5,48 +5,46 @@ import ContentBox, { CONTENT_BOX_SPACING_SIZE } from 'style-guide/src/components
 import List from 'style-guide/src/components/list/List';
 import ListItem from 'style-guide/src/components/list/ListItem';
 
-const LinkListAboutUs = () => {
-    return (
-        <ActionListHole grow spaceBellow>
-            <Text size={TEXT_SIZE.STANDOUT} weight={TEXT_WEIGHT.BOLD}>
+const LinkListAboutUs = () => (
+  <ActionListHole grow spaceBellow>
+    <Text size={TEXT_SIZE.STANDOUT} weight={TEXT_WEIGHT.BOLD}>
                 About us
-            </Text>
-            <ContentBox spacedTop={CONTENT_BOX_SPACING_SIZE.LARGE}>
-                <List spaced>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.co/about.html">
+    </Text>
+    <ContentBox spacedTop={CONTENT_BOX_SPACING_SIZE.LARGE}>
+      <List spaced>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.co/about.html">
                             About us
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.co/team.html">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.co/team.html">
                             Team
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.co/work-with-us.html">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.co/work-with-us.html">
                             Work with us
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/contact/index">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://brainly.com/contact/index">
                             Contact
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="">
                             Mobile apps
-                </Text>
-                    </ListItem>
-                    <ListItem>
-                        <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://blog.brainly.co/">
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text size={TEXT_SIZE.SMALL} color={TEXT_COLOR.GRAY_SECONDARY} weight={TEXT_WEIGHT.BOLD} href="https://blog.brainly.co/">
                             Blog
-                </Text>
-                    </ListItem>
-                </List>
-            </ContentBox>
-        </ActionListHole>
-    )
-}
+          </Text>
+        </ListItem>
+      </List>
+    </ContentBox>
+  </ActionListHole>
+);
 
 export default LinkListAboutUs;
