@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import ContentBox from 'style-guide/src/components/content-box/ContentBox';
 import ContentBoxContent, { SIZE as CONTENT_BOX_CONT_SIZE } from 'style-guide/src/components/content-box/ContentBoxContent';

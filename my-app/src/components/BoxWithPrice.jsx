@@ -1,11 +1,15 @@
-/* eslint react/prop-types: 0 */
+// @flow
 import React from 'react';
 import Box, { COLOR as BOX_COLOR, PADDING as BOX_PADDING } from 'style-guide/src/components/box/Box';
 import ContentBox, { CONTENT_BOX_SPACING_SIZE } from 'style-guide/src/components/content-box/ContentBox';
 import ContentBoxContent, { ALIGNMENT as CONTENT_BOX_CON_ALIGNMENT } from 'style-guide/src/components/content-box/ContentBoxContent';
 import Text, { SIZE as TEXT_SIZE, WEIGHT as TEXT_WEIGHT } from 'style-guide/src/components/text/Text';
 
-const BoxWithPrice = (props) => {
+type BoxWithPriceType = {
+  price: String,
+  methodsOfPayment: String
+};
+const BoxWithPrice = (props: BoxWithPriceType) => {
   const price = props.price || '';
   const methodsOfPayment = props.methodsOfPayment || '';
 
