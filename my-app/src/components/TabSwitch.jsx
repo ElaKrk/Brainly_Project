@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
 import Text, { SIZE as TEXT_SIZE, COLOR as TEXT_COLOR, WEIGHT as TEXT_WEIGHT } from 'style-guide/src/components/text/Text';
 
+// import Tabs from './Tabs';
+
 const WIDTH = {
   SMALL: 'small',
   NORMAL: 'normal',
@@ -19,12 +21,10 @@ class TabSwitch extends React.Component {
     this.handleTabClick = this.handleTabClick.bind(this);
   }
 
-  handleTabClick(event) {
-    event.preventDefault();
-    const { tabIndex } = event.target;
+  handleTabClick(index) {
     this.setState({
-      activeTabIndex: tabIndex === this.state.activeTabIndex ?
-        this.props.defaultActiveTabIndex : tabIndex,
+      activeTabIndex: index === this.state.activeTabIndex ?
+        this.props.defaultActiveTabIndex : index,
     });
   }
 
@@ -33,18 +33,18 @@ class TabSwitch extends React.Component {
     const tabElements = this.props.tabElements || [];
     const tabItems = tabElements.map((tabElement, index) => (
       <Text
-        key={tabElement.props.children.toString()}
         color={TEXT_COLOR.GRAY}
         size={TEXT_SIZE.SMALL}
         weight={TEXT_WEIGHT.BOLD}
+        key={tabElement.name}
         className={classNames(
-          'brn-switch-tab__tab',
-          `${(index === this.state.activeTabIndex) ? 'brn-switch-tab__tab--active' : ''}`,
-        )}
-        onClick={this.handleTabClick}
+        'brn-switch-tab__tab',
+        (index === this.state.activeTabIndex) ? 'brn-switch-tab__tab--active' : '',
+      )}
+        onClick={() => this.handleTabClick(index)}
         tabIndex={index}
       >
-        {tabElement.props.name}
+        {tabElement.name}
       </Text>
     ));
     return tabItems;
@@ -55,7 +55,7 @@ class TabSwitch extends React.Component {
     const { tabElements } = this.props;
     const { activeTabIndex } = this.state;
     if (tabElements[activeTabIndex]) {
-      return tabElements[activeTabIndex].props.children;
+      return tabElements[activeTabIndex].content;
     }
     return '';
   }

@@ -21,39 +21,35 @@ const tabOneImgSrc = 'https://source.unsplash.com/240x240/?cat';
 const tabTwoImgSrc = 'https://source.unsplash.com/240x240/?dog';
 const tabThreeImgSrc = 'https://source.unsplash.com/240x240/?monkey';
 
-const tabElementOne = (
-  <div name={tabOne} className="brn-box--flex">
-    <ImageRound imgSrc={tabOneImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />
-    {StudentsTabContent}
+const tabElementOne = {
+  name: tabOne,
+  tabsClass: 'brn-box--flex',
+  content: [<ImageRound imgSrc={tabOneImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />,
+    StudentsTabContent,
     <Text className="brn-text--padding-top-bottom-medium" weight={TEXT_WEIGHT.BOLD}>
       {tabOneAuthor}
-    </Text>
-  </div>
-);
+    </Text>],
+};
 
-const tabElementTwo = (
-  <div name={tabTwo} className="brn-box--flex">
-    <ImageRound imgSrc={tabTwoImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />
-    {ParentsTabContent}
+const tabElementTwo = {
+  name: tabTwo,
+  tabsClass: 'brn-box--flex',
+  content: [<ImageRound imgSrc={tabTwoImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />,
+    ParentsTabContent,
     <Text className="brn-text--padding-top-bottom-medium" weight={TEXT_WEIGHT.BOLD}>
       {tabTwoAuthor}
-    </Text>
-  </div>
-);
+    </Text>],
+};
 
-const tabElementThree = (
-  <div name={tabThree} className="brn-box--flex">
-    <ImageRound
-      imgSrc={tabThreeImgSrc}
-      size={ROUND_IMAGE_SIZE.LARGE}
-      className="brn-element--float-right"
-    />
-    {HomeschoolersTabContent}
+const tabElementThree = {
+  name: tabThree,
+  tabsClass: 'brn-box--flex',
+  content: [<ImageRound imgSrc={tabThreeImgSrc} size={ROUND_IMAGE_SIZE.LARGE} className="brn-element--float-right" />,
+    HomeschoolersTabContent,
     <Text className="brn-text--padding-top-bottom-medium" weight={TEXT_WEIGHT.BOLD}>
       {tabThreeAuthor}
-    </Text>
-  </div>
-);
+    </Text>],
+};
 
 const tabElements = [tabElementOne, tabElementTwo, tabElementThree];
 
