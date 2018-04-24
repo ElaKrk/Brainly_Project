@@ -2,7 +2,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
-import Text, { SIZE as TEXT_SIZE, COLOR as TEXT_COLOR, WEIGHT as TEXT_WEIGHT } from 'style-guide/src/components/text/Text';
+import Tab from './Tab';
 
 // import Tabs from './Tabs';
 
@@ -32,20 +32,12 @@ class TabSwitch extends React.Component {
   renderChildrenWithTabsApiAsProps() {
     const tabElements = this.props.tabElements || [];
     const tabItems = tabElements.map((tabElement, index) => (
-      <Text
-        color={TEXT_COLOR.GRAY}
-        size={TEXT_SIZE.SMALL}
-        weight={TEXT_WEIGHT.BOLD}
-        key={tabElement.name}
-        className={classNames(
-        'brn-switch-tab__tab',
-        (index === this.state.activeTabIndex) ? 'brn-switch-tab__tab--active' : '',
-      )}
+      <Tab
+        tab={tabElement.name}
+        index={index}
         onClick={() => this.handleTabClick(index)}
-        tabIndex={index}
-      >
-        {tabElement.name}
-      </Text>
+        className={(index === this.state.activeTabIndex) ? 'brn-switch-tab__tab--active' : ''}
+      />
     ));
     return tabItems;
   }
