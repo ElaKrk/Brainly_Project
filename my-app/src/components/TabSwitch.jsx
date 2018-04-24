@@ -2,7 +2,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
-import Text, { SIZE as TEXT_SIZE, COLOR as TEXT_COLOR, WEIGHT as TEXT_WEIGHT } from 'style-guide/src/components/text/Text';
+import Tab from './Tab';
+
+// import Tabs from './Tabs';
 
 const WIDTH = {
   SMALL: 'small',
@@ -19,12 +21,10 @@ class TabSwitch extends React.Component {
     this.handleTabClick = this.handleTabClick.bind(this);
   }
 
-  handleTabClick(event) {
-    event.preventDefault();
-    const { tabIndex } = event.target;
+  handleTabClick(index) {
     this.setState({
-      activeTabIndex: tabIndex === this.state.activeTabIndex ?
-        this.props.defaultActiveTabIndex : tabIndex,
+      activeTabIndex: index === this.state.activeTabIndex ?
+        this.props.defaultActiveTabIndex : index,
     });
   }
 
@@ -32,20 +32,12 @@ class TabSwitch extends React.Component {
   renderChildrenWithTabsApiAsProps() {
     const tabElements = this.props.tabElements || [];
     const tabItems = tabElements.map((tabElement, index) => (
-      <Text
-        key={tabElement.props.children.toString()}
-        color={TEXT_COLOR.GRAY}
-        size={TEXT_SIZE.SMALL}
-        weight={TEXT_WEIGHT.BOLD}
-        className={classNames(
-          'brn-switch-tab__tab',
-          `${(index === this.state.activeTabIndex) ? 'brn-switch-tab__tab--active' : ''}`,
-        )}
-        onClick={this.handleTabClick}
-        tabIndex={index}
-      >
-        {tabElement.props.name}
-      </Text>
+      <Tab
+        tab={tabElement.name}
+        index={index}
+        onClick={() => this.handleTabClick(index)}
+        active={(index === this.state.activeTabIndex)}
+      />
     ));
     return tabItems;
   }
@@ -55,7 +47,7 @@ class TabSwitch extends React.Component {
     const { tabElements } = this.props;
     const { activeTabIndex } = this.state;
     if (tabElements[activeTabIndex]) {
-      return tabElements[activeTabIndex].props.children;
+      return tabElements[activeTabIndex].content;
     }
     return '';
   }
@@ -78,10 +70,10 @@ class TabSwitch extends React.Component {
         </div>
         <ContentBoxContent className="brn-box--flex brn-box--flex-spread brn-content-box__content--padding-top-bottom-medium">
           <div className="brn-box--width-small">
-            {this.renderActiveTabContent()[0]}
+            {this.renderActiveTabContent().props.children[0]}
           </div>
           <div className="brn-box--width-medium-large">
-            <div> {this.renderActiveTabContent().slice(1)}
+            <div> {this.renderActiveTabContent().props.children.slice(1)}
             </div>
             {button}
           </div>

@@ -14,27 +14,34 @@ const AddFreeContent = 'Ad-free ...';
 
 const numberOfVerifiedAnswers = '2 mln';
 
-const tabElementOne = (
-  <div name={tabOne}>
+
+const tabElementOne = {
+  name: tabOne,
+  content:
+  <React.Fragment>
     <ImageRoundWithTag tagValue={numberOfVerifiedAnswers} tagText="Verified Answers" />
     {VerifiedContent}
     <ListVerifiedAnswers />
-  </div>
-);
+  </React.Fragment>,
+};
 
-const tabElementTwo = (
-  <div name={tabTwo}>
+const tabElementTwo = {
+  name: tabTwo,
+  content:
+  <React.Fragment>
     <ImageRoundWithTag tagValue={numberOfVerifiedAnswers} tagText="Verified Answers" />
     {PriorityContent}
-  </div>
-);
+  </React.Fragment>,
+};
 
-const tabElementThree = (
-  <div name={tabThree}>
+const tabElementThree = {
+  name: tabThree,
+  content:
+  <React.Fragment>
     <ImageRoundWithTag tagValue={numberOfVerifiedAnswers} tagText="Verified Answers" />
     {AddFreeContent}
-  </div>
-);
+  </React.Fragment>,
+};
 
 const tabElements = [tabElementOne, tabElementTwo, tabElementThree];
 

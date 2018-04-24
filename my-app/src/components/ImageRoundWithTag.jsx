@@ -13,7 +13,7 @@ const SIZE = {
 const ImageRoundWithTag = ({
   size = SIZE.SMALL, className, tagValue, tagText,
 }) => {
-  const TagClass = classNames(
+  const tagClass = classNames(
     'brn-image-tag', 'brn-image-tag--position-right',
     { [`brn-image-tag-size--${size}`]: size },
     className,
@@ -23,7 +23,7 @@ const ImageRoundWithTag = ({
   return (
     <ContentBoxContent className="brn-image-with-tag">
       <ImageRound size={ROUND_IMAGE_SIZE.LARGE} />
-      <Box noMinHeight padding="no-padding" className={TagClass}>
+      <Box noMinHeight padding="no-padding" className={tagClass}>
         {tagValue}
         <span>{tagText}</span>
       </Box>
