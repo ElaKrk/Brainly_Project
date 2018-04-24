@@ -1,19 +1,27 @@
-/* eslint react/prop-types: 0 */
+// @flow
 import React from 'react';
 import classNames from 'classnames';
 
 const SIZE = {
-  SMALL: { className: 'small' },
-  NORMAL: { className: 'normal' },
-  LARGE: { className: 'large' },
+  SMALL: 'small',
+  NORMAL: 'normal',
+  LARGE: 'large',
 };
 
+type ImageSquareType = {
+  size?: string,
+  className?: string,
+  imgSrc?: string,
+  title?: string
+}
 const ImageSquare = ({
-  size = SIZE.NORMAL, imgSrc, className, title, ...props
-}) => {
-  const squareImgClass = classNames({
-    [`brn-square-image--${size.className}`]: size !== SIZE.normal,
-  }, className);
+  size, imgSrc, className, title, ...props
+}:
+ImageSquareType) => {
+  const squareImgClass = classNames(
+    ['brn-square-image--', size],
+    className,
+  );
 
   let imageSquareContent;
 
@@ -29,6 +37,13 @@ const ImageSquare = ({
       {imageSquareContent}
     </div>
   );
+};
+
+ImageSquare.defaultProps = {
+  size: 'normal',
+  className: undefined,
+  imgSrc: undefined,
+  title: undefined,
 };
 
 export default ImageSquare;

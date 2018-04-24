@@ -1,9 +1,14 @@
-/* eslint react/prop-types: 0 */
+// @flow
 import React from 'react';
 import ButtonPrimary, { BUTTON_PRIMARY_TYPE } from 'style-guide/src/components/buttons/ButtonPrimary';
 import classNames from 'classnames';
 
-const ButtonGetBrnPlus = ({ padding, className, ...props }) => {
+type ButtonGetBrnPlusType = {
+  padding?: string,
+  className?: string,
+  children?: string
+}
+const ButtonGetBrnPlus = ({ padding, className, ...props }:ButtonGetBrnPlusType) => {
   const buttonGetBrnPlusClass = classNames('brn-element--weight-light', {
     'brn-button--padding': padding,
   }, className);
@@ -13,4 +18,11 @@ const ButtonGetBrnPlus = ({ padding, className, ...props }) => {
     </ButtonPrimary>
   );
 };
+
+ButtonGetBrnPlus.defaultProps = {
+  padding: undefined,
+  className: undefined,
+  children: undefined,
+};
+
 export default ButtonGetBrnPlus;

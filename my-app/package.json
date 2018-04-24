@@ -96,11 +96,8 @@
     "extends": "react-app"
   },
   "devDependencies": {
-<<<<<<< HEAD
-=======
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
->>>>>>> 9877670907de0cd81f08fc23255de7c2214f154f
     "eslint-config-airbnb": "^16.1.0",
     "flow-bin": "^0.70.0"
   }

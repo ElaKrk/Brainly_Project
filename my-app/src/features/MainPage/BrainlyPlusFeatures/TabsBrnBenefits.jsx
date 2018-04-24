@@ -1,3 +1,5 @@
+/* eslint react/prop-types: 0 */
+
 import React from 'react';
 import HeaderSecondary, { HEADER_SIZE } from 'style-guide/src/components/text/HeaderPrimary';
 import Text, { WEIGHT as TEXT_WEIGHT } from 'style-guide/src/components/text/Text';

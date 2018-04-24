@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import ButtonPrimary, { BUTTON_PRIMARY_TYPE } from 'style-guide/src/components/buttons/ButtonPrimary';
 

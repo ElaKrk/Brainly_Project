@@ -1,21 +1,28 @@
-/* eslint react/prop-types: 0 */
+// @flow
 import React from 'react';
 import classNames from 'classnames';
 
 const SIZE = {
-  SMALL: { className: 'small' },
-  NORMAL: { className: 'normal' },
-  LARGE: { className: 'large' },
-  XLARGE: { className: 'xlarge' },
-  XXLARGE: { className: 'xxlarge' },
+  SMALL: 'small',
+  NORMAL: 'normal',
+  LARGE: 'large',
+  XLARGE: 'xlarge',
+  XXLARGE: 'xxlarge',
 };
 
+type ImageRoundType = {
+  size?: string,
+  imgSrc?: string,
+  className?: string,
+  title?: string
+}
 const ImageRound = ({
-  size = SIZE.NORMAL, imgSrc, className, title, ...props
-}) => {
-  const roundImgClass = classNames({
-    [`brn-round-image--${size.className}`]: size !== SIZE.normal,
-  }, className);
+  size, imgSrc, className, title, ...props }:
+  ImageRoundType) => {
+  const imageRoundClass = classNames(
+    ['brn-round-image--', size],
+    className,
+  );
 
 
   let imageRoundContent;
@@ -28,10 +35,17 @@ const ImageRound = ({
   }
 
   return (
-    <div {...props} className={roundImgClass}>
+    <div {...props} className={imageRoundClass}>
       {imageRoundContent}
     </div>
   );
+};
+
+ImageRound.defaultProps = {
+  size: SIZE.NORMAL,
+  imgSrc: undefined,
+  className: undefined,
+  title: undefined,
 };
 
 export default ImageRound;

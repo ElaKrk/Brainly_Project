@@ -6,8 +6,8 @@ import ContentBoxContent, { ALIGNMENT as CONTENT_BOX_CON_ALIGNMENT } from 'style
 import Text, { SIZE as TEXT_SIZE, WEIGHT as TEXT_WEIGHT } from 'style-guide/src/components/text/Text';
 
 type BoxWithPriceType = {
-  price: String,
-  methodsOfPayment: String
+  price?: string,
+  methodsOfPayment?: string
 };
 const BoxWithPrice = (props: BoxWithPriceType) => {
   const price = props.price || '';
@@ -34,6 +34,10 @@ const BoxWithPrice = (props: BoxWithPriceType) => {
       </ContentBox>
     </div>
   );
+};
+BoxWithPrice.defaultProps = {
+  price: undefined,
+  methodsOfPayment: undefined,
 };
 
 export default BoxWithPrice;
