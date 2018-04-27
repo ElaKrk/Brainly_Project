@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import Footer from 'style-guide/src/components/footer/Footer';
 import ActionList, { DIRECTION } from 'style-guide/src/components/action-list/ActionList';
 import LinkListAboutUs from './LinkListAboutUs';

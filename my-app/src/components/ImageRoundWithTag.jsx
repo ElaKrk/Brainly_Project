@@ -1,5 +1,5 @@
-/* eslint react/prop-types: 0 */
-import React from 'react';
+// @flow
+import * as React from 'react';
 import classNames from 'classnames';
 import Box from 'style-guide/src/components/box/Box';
 import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
@@ -10,15 +10,22 @@ const SIZE = {
   LARGE: 'large',
 };
 
+type ImageRoundWithTagPropsType = {
+  size?: string,
+  className?: string,
+  tagValue?: string,
+  tagText?: string
+}
+
 const ImageRoundWithTag = ({
-  size = SIZE.SMALL, className, tagValue, tagText,
-}) => {
+  size, className, tagValue, tagText,
+}:
+ImageRoundWithTagPropsType) => {
   const tagClass = classNames(
     'brn-image-tag', 'brn-image-tag--position-right',
-    { [`brn-image-tag-size--${size}`]: size },
+    size ? `brn-image-tag-size--${size}` : `brn-image-tag-size--${ImageRoundWithTag.defaultProps.size}`,
     className,
   );
-
 
   return (
     <ContentBoxContent className="brn-image-with-tag">
@@ -29,6 +36,13 @@ const ImageRoundWithTag = ({
       </Box>
     </ContentBoxContent>
   );
+};
+
+ImageRoundWithTag.defaultProps = {
+  size: SIZE.SMALL,
+  className: undefined,
+  tagValue: undefined,
+  tagText: undefined,
 };
 
 export default ImageRoundWithTag;

@@ -1,27 +1,34 @@
-/* eslint react/prop-types: 0 */
-import React from 'react';
+// @flow
+import * as React from 'react';
 import classNames from 'classnames';
 
 const SIZE = {
-  SMALL: { className: 'small' },
-  NORMAL: { className: 'normal' },
-  LARGE: { className: 'large' },
+  SMALL: 'small',
+  NORMAL: 'normal',
+  LARGE: 'large',
 };
 
+type ImageSquarePropsType = {
+  size?: string,
+  className?: string,
+  imgSrc?: string,
+  title?: string
+}
+
 const ImageSquare = ({
-  size = SIZE.NORMAL, imgSrc, className, title, ...props
-}) => {
-  const squareImgClass = classNames({
-    [`brn-square-image--${size.className}`]: size !== SIZE.normal,
-  }, className);
+  size, imgSrc, className, title, ...props }:
+ImageSquarePropsType) => {
+  const squareImgClass = classNames(
+    size ? `brn-square-image--${size}` : `brn-square-image--${ImageSquare.defaultProps.size}`,
+    className,
+  );
 
   let imageSquareContent;
 
   if (imgSrc) {
     imageSquareContent = <img className="brn-square-image" src={imgSrc} alt={title} title={title} />;
   } else {
-    imageSquareContent =
-      <div className="brn-square-image brn-square-image--icon" />;
+    imageSquareContent = <div className="brn-square-image brn-square-image--icon" />;
   }
 
   return (
@@ -29,6 +36,13 @@ const ImageSquare = ({
       {imageSquareContent}
     </div>
   );
+};
+
+ImageSquare.defaultProps = {
+  size: SIZE.NORMAL,
+  className: undefined,
+  imgSrc: undefined,
+  title: undefined,
 };
 
 export default ImageSquare;

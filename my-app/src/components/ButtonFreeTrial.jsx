@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import ButtonPrimary, { BUTTON_PRIMARY_TYPE } from 'style-guide/src/components/buttons/ButtonPrimary';
 
 const ButtonFreeTrial = () => {
@@ -8,4 +9,5 @@ const ButtonFreeTrial = () => {
     <ButtonPrimary buttonType={BUTTON_PRIMARY_TYPE.DARK} className="brn-element--weight-light">{text}</ButtonPrimary>
   );
 };
+
 export default ButtonFreeTrial;

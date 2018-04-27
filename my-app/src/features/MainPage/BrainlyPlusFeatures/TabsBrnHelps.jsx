@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import HeaderSecondary, { HEADER_SIZE } from 'style-guide/src/components/text/HeaderPrimary';
 import ListVerifiedAnswers from './ListVerifiedAnswers';
 import TabSwitch from '../../../components/TabSwitch';
@@ -13,7 +14,6 @@ const PriorityContent = 'Priority questions ...';
 const AddFreeContent = 'Ad-free ...';
 
 const numberOfVerifiedAnswers = '2 mln';
-
 
 const tabElementOne = {
   name: tabOne,

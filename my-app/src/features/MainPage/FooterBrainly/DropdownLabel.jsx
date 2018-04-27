@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import ActionList from 'style-guide/src/components/action-list/ActionList';
 import ActionListHole from 'style-guide/src/components/action-list/ActionListHole';
 import Icon, { TYPE as ICON_TYPE } from 'style-guide/src/components/icons/Icon';
@@ -10,7 +11,7 @@ const DropdownLabel = () => (
       <Icon type={ICON_TYPE.PLANET} color="gray" size="16" />
     </ActionListHole>
     <ActionListHole>
-                Brainly.com
+                Brainly.pl
     </ActionListHole>
   </ActionList>
 );

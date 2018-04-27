@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import HeaderBrainly from './HeaderBrainly';
 import FreeTrial from './FreeTrial';
 import GetBrainlyPlus from './GetBrainlyPlus';

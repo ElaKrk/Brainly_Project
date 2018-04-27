@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import Header from 'style-guide/src/components/header/Header';
 import HeaderContainer from 'style-guide/src/components/header/HeaderContainer';
 import HeaderContent from 'style-guide/src/components/header/HeaderContent';

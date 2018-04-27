@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import DropdownContainer from 'style-guide/src/components/dropdowns/DropdownContainer';
 // import Dropdown from 'style-guide/src/components/dropdowns/Dropdown';
 // import DropdownItem from 'style-guide/src/components/dropdowns/DropdownItem';
