@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 
 const SIZE = {
@@ -10,20 +10,20 @@ const SIZE = {
   XXLARGE: 'xxlarge',
 };
 
-type ImageRoundType = {
+type ImageRoundPropsType = {
   size?: string,
   imgSrc?: string,
   className?: string,
   title?: string
 }
+
 const ImageRound = ({
   size, imgSrc, className, title, ...props }:
-  ImageRoundType) => {
+  ImageRoundPropsType) => {
   const imageRoundClass = classNames(
-    ['brn-round-image--', size],
+    size ? `brn-round-image--${size}` : `brn-round-image--${ImageRound.defaultProps.size}`,
     className,
   );
-
 
   let imageRoundContent;
 

@@ -11,13 +11,14 @@
   margin: 0 auto;
   padding: 4em 2em;
 }
+
 .brn-content-box__content--padding-small {
   padding: 3em 2em;
 }
+
 .brn-content-box__content--padding-top-bottom-medium {
   padding: 3em 0;
 }
-
 
 .brn-box--flex {
   display: -webkit-box;
@@ -32,13 +33,6 @@
   -ms-flex-pack: justify;
   justify-content: space-between
 }
-
-/* .brn-box--flex-center {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-} */
 
 .brn-box--width-medium {
   width: 500px;
@@ -72,6 +66,7 @@
 .brn-round-image--icon {
   background-color: #e1e8ed;
 }
+
 .brn-square-image--icon {
   background-color: #e1e8ed;
 }
@@ -80,6 +75,7 @@
   width: 80px;
   height: 80px
 }
+
 .brn-square-image--small {
   width: 80px;
   height: 80px
@@ -89,6 +85,7 @@
   width: 140px;
   height: 140px
 }
+
 .brn-square-image--normal {
   width: 140px;
   height: 140px
@@ -98,6 +95,7 @@
   width: 190px;
   height: 190px
 }
+
 .brn-square-image--large {
   width: 190px;
   height: 190px
@@ -121,23 +119,29 @@
 .brn-text--padding-bottom-small {
   padding-bottom: 1em;
 }
+
 .brn-text--padding-bottom-medium {
   padding-bottom: 2em;
 }
+
 .brn-text--padding-top-bottom-medium {
   padding: 1em 0 2.5em 0;
 }
+
 .brn-un-list-padding-left--large {
   margin: 0;
   padding-left: 65px;
 }
+
 .brn-un-list-padding-left--small {
   margin: 0;
   padding-left: 20px;
 }
+
 .brn-box--width-medium-large {
   width: 550px;
 }
+
 .brn-element--float-right {
   float: right;
 }
@@ -190,6 +194,7 @@
   text-align: center;
   border-right: 1px solid#9fa6b5;
 }
+
 .brn-switch-tab__tab:focus {
   outline:0;
 }
@@ -212,13 +217,16 @@
   margin-left: 250px;
   text-align: center;
 }
+
 .brn-button--padding {
   padding: 0 35px;
 }
+
 .brn-image-with-tag {
   position: relative;
   padding-left: 20px;
 }
+
 .brn-image-tag {
   padding: 10px;
   text-align: center;
@@ -227,16 +235,18 @@
   font-size: .875rem;
   line-height: 1.125rem;
   max-width: 135px;
-  
 }
+
 .brn-image-tag--position-right {
   position: absolute;
   right: 20px;
   top: 145px;
 }
+
 .brn-mobile-store__button--ios {
   background-image: url(https://brainly.pl/app/img/mobile_store/download_ios_app_pl.svg);
 }
+
 .brn-mobile-store__button--ios-us {
   background-image: url(https://brainly.com/app/img/mobile_store/download_ios_app_us.svg);
 }

@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import ActionListHole from 'style-guide/src/components/action-list/ActionListHole';
 // import Text, { SIZE as TEXT_SIZE, WEIGHT as TEXT_WEIGHT, COLOR as TEXT_COLOR } from
 // 'style-guide/src/components/text/Text';

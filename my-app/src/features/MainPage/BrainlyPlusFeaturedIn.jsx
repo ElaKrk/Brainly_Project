@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import ContentBox from 'style-guide/src/components/content-box/ContentBox';
 import ContentBoxContent, { SIZE, ALIGNMENT } from 'style-guide/src/components/content-box/ContentBoxContent';
 import HeaderSecondary, { HEADER_SIZE } from 'style-guide/src/components/text/HeaderPrimary';

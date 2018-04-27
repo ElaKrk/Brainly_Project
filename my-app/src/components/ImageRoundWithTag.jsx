@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 import Box from 'style-guide/src/components/box/Box';
 import ContentBoxContent from 'style-guide/src/components/content-box/ContentBoxContent';
@@ -10,7 +10,7 @@ const SIZE = {
   LARGE: 'large',
 };
 
-type ImageRoundWithTagType = {
+type ImageRoundWithTagPropsType = {
   size?: string,
   className?: string,
   tagValue?: string,
@@ -20,13 +20,12 @@ type ImageRoundWithTagType = {
 const ImageRoundWithTag = ({
   size, className, tagValue, tagText,
 }:
-ImageRoundWithTagType) => {
+ImageRoundWithTagPropsType) => {
   const tagClass = classNames(
     'brn-image-tag', 'brn-image-tag--position-right',
-    ['brn-image-tag-size--', size],
+    size ? `brn-image-tag-size--${size}` : `brn-image-tag-size--${ImageRoundWithTag.defaultProps.size}`,
     className,
   );
-
 
   return (
     <ContentBoxContent className="brn-image-with-tag">
@@ -38,8 +37,9 @@ ImageRoundWithTagType) => {
     </ContentBoxContent>
   );
 };
+
 ImageRoundWithTag.defaultProps = {
-  size: 'normal',
+  size: SIZE.SMALL,
   className: undefined,
   tagValue: undefined,
   tagText: undefined,

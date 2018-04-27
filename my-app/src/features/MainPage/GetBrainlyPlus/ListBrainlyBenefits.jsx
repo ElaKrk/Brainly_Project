@@ -1,5 +1,6 @@
-import React from 'react';
-import UnorderedList, { SIZE as LIST_SIZE } from '../../../components/UnorderedList';
+// @flow
+import * as React from 'react';
+import UnorderedList, { PADDING as LIST_PADDING } from '../../../components/UnorderedList';
 
 const ListBrainlyBenefits = () => {
   const numberOfVerifiedAnswers = '123,00';
@@ -16,7 +17,7 @@ const ListBrainlyBenefits = () => {
   const liElements = [one, two, three, four, five, six, seven];
 
   return (
-    <UnorderedList liElements={liElements} size={LIST_SIZE.LARGE} spaced />
+    <UnorderedList liElements={liElements} padding={LIST_PADDING.LARGE} spaced />
   );
 };
 

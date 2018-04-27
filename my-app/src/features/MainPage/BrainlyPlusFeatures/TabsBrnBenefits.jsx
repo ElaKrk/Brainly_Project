@@ -1,6 +1,5 @@
-/* eslint react/prop-types: 0 */
-
-import React from 'react';
+// @flow
+import * as React from 'react';
 import HeaderSecondary, { HEADER_SIZE } from 'style-guide/src/components/text/HeaderPrimary';
 import Text, { WEIGHT as TEXT_WEIGHT } from 'style-guide/src/components/text/Text';
 import ButtonGetBrnPlus from '../../../components/ButtonGetBrnPlus';
@@ -68,7 +67,10 @@ const TabsBrnBenefits = () => (
         Brainly Plus benefits for
       </HeaderSecondary>
     </div>
-    <TabSwitch tabElements={tabElements} button={<ButtonGetBrnPlus>Start now</ButtonGetBrnPlus>} />
+    <TabSwitch
+      tabElements={tabElements}
+      button={<ButtonGetBrnPlus padding>Start now</ButtonGetBrnPlus>}
+    />
   </React.Fragment>
 );
 

@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 
 const SIZE = {
@@ -8,18 +8,18 @@ const SIZE = {
   LARGE: 'large',
 };
 
-type ImageSquareType = {
+type ImageSquarePropsType = {
   size?: string,
   className?: string,
   imgSrc?: string,
   title?: string
 }
+
 const ImageSquare = ({
-  size, imgSrc, className, title, ...props
-}:
-ImageSquareType) => {
+  size, imgSrc, className, title, ...props }:
+ImageSquarePropsType) => {
   const squareImgClass = classNames(
-    ['brn-square-image--', size],
+    size ? `brn-square-image--${size}` : `brn-square-image--${ImageSquare.defaultProps.size}`,
     className,
   );
 
@@ -28,8 +28,7 @@ ImageSquareType) => {
   if (imgSrc) {
     imageSquareContent = <img className="brn-square-image" src={imgSrc} alt={title} title={title} />;
   } else {
-    imageSquareContent =
-      <div className="brn-square-image brn-square-image--icon" />;
+    imageSquareContent = <div className="brn-square-image brn-square-image--icon" />;
   }
 
   return (
@@ -40,7 +39,7 @@ ImageSquareType) => {
 };
 
 ImageSquare.defaultProps = {
-  size: 'normal',
+  size: SIZE.NORMAL,
   className: undefined,
   imgSrc: undefined,
   title: undefined,
